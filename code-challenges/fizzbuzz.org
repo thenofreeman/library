@@ -1,0 +1,46 @@
+#+title: FizzBuzz
+
+* Contents :toc:
+- [[#info][Info]]
+  - [[#explaination][Explaination]]
+  - [[#pseudo-code][Pseudo Code]]
+  - [[#theory][Theory]]
+- [[#code][Code]]
+  - [[#c][C++]]
+
+* Info
+** Explaination
+
+** Pseudo Code
+
+#+name: fizzbuzz-ps
+#+begin_src text
+
+#+end_src
+
+** Theory
+* Code
+** C++
+
+#+name: fizzbuzz-cpp
+#+begin_src C++ :results output
+#include <iostream>
+
+int main()
+{
+    int limit{100};
+
+    for (int i{1}; i < limit+1; ++i) {
+        if (i % 3 == 0)
+            std::cout << "Fizz";
+        if (i % 5 == 0)
+            std::cout << "Buzz";
+        if (i % 3 != 0 && i % 5 != 0)
+            std::cout << i;
+
+        std::cout << '\n';
+    }
+
+    return 0;
+}
+#+end_src

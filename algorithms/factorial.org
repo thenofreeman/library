@@ -1,0 +1,87 @@
+#+title: Factorial
+
+* Contents :toc:
+- [[#info][Info]]
+  - [[#explaination][Explaination]]
+  - [[#pseudo-code][Pseudo Code]]
+  - [[#theory][Theory]]
+- [[#code][Code]]
+  - [[#c][C++]]
+
+* Info
+** Explaination
+** Pseudo Code
+
+*** Iterative
+
+#+name: factorial-iterative-ps
+#+begin_src text
+
+#+end_src
+
+*** Recursive
+
+#+name: factorial-recursive-ps
+#+begin_src text
+
+#+end_src
+
+** Theory
+* Code
+** C++
+
+*** Iterative
+
+#+name: factorial-iterative-cpp
+#+begin_src C++ :main no
+#include <stdexcept>
+
+int main()
+{
+    factorial_iterative(.);
+    return 0;
+}
+
+int factorial_iterative(const int& num)
+{
+    if (num < 0)
+        throw std::invalid_argument("Argument to factorial_recursive() must be nonnegative.");
+
+    int fact{1};
+    int i{1};
+
+    while (i <= num)
+        fact *= i++;
+
+    return fact;
+}
+#+end_src
+
+*** Recursive
+
+#+name: factorial-recursive-cpp
+#+begin_src C++ :main no
+#include <stdexcept>
+
+int main()
+{
+    factorial_recursive(.);
+    return 0;
+}
+
+int factorial_recursive(const int& num)
+{
+    if (num < 0)
+        throw std::invalid_argument("Argument to factorial_recursive() must be nonnegative.");
+
+    return viso::factorial_recursiveHelper(num);
+}
+
+int factorial_recursiveHelper(const int& num)
+{
+    if (num == 0)
+        return 1;
+
+    return num * viso::factorial_recursiveHelper(num-1);
+}
+#+end_src

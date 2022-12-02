@@ -1,0 +1,46 @@
+#+title: Selection Sort
+
+* Contents :toc:
+- [[#info][Info]]
+  - [[#explaination][Explaination]]
+  - [[#pseudo-code][Pseudo Code]]
+  - [[#theory][Theory]]
+- [[#code][Code]]
+  - [[#c][C++]]
+
+* Info
+** Explaination
+** Pseudo Code
+
+#+name: selection-sort-ps
+#+begin_src text
+
+#+end_src
+
+** Theory
+* Code
+** C++
+
+#+name: selection-sort-cpp
+#+begin_src C++ :main no
+int main()
+{
+    selectionSort(.);
+}
+
+void selectionSort(const int* items, const int& itemcount)
+{
+    size_t min{0};
+    for (size_t low{0}; low < itemcount-1; ++low) {
+        min = low;
+        for (size_t cur{low+1}; cur < itemcount; ++cur) {
+            if (items[cur] < items[min]) {
+            min = cur;
+            }
+        }
+        int temp = items[low];
+        items[low] = items[min];
+        items[min] = temp;
+    }
+}
+#+end_src

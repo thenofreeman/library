@@ -1,0 +1,48 @@
+#+title: Towers Of Hanoi
+
+* Contents :toc:
+- [[#info][Info]]
+  - [[#explaination][Explaination]]
+  - [[#pseudo-code][Pseudo Code]]
+  - [[#theory][Theory]]
+- [[#code][Code]]
+  - [[#c][C++]]
+
+* Info
+** Explaination
+
+** Pseudo Code
+
+#+name: towers-of-hanoi-ps
+#+begin_src text
+
+#+end_src
+
+** Theory
+* Code
+** C++
+
+#+name: towers-of-hanoi-cpp
+#+begin_src C++ :results output
+#include <iostream>
+
+int main()
+{
+    solveTowersOfHanoi(,,,);
+    return 0;
+}
+
+void solveTowersOfHanoi(const int& count, const char& src, const char& dest, const char& spare)
+{
+    if (count == 1)
+    {
+        std::cout << "Move the top disk from pole " << src << " to pole " << dest << '\n';
+    }
+    else
+    {
+        solveTowersOfHanoi(count-1, src, spare, dest);
+        solveTowersOfHanoi(1, src, dest, spare);
+        solveTowersOfHanoi(count-1, spare, dest, src);
+    }
+}
+#+end_src

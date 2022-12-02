@@ -1,0 +1,46 @@
+#+title: 100 Doors
+
+* Contents :toc:
+- [[#info][Info]]
+  - [[#explaination][Explaination]]
+  - [[#pseudo-code][Pseudo Code]]
+  - [[#theory][Theory]]
+- [[#code][Code]]
+  - [[#c][C++]]
+
+* Info
+** Explaination
+
+** Pseudo Code
+
+#+name: 100-doors-ps
+#+begin_src text
+
+#+end_src
+
+** Theory
+* Code
+** C++
+
+#+name: 100-doors-cpp
+#+begin_src C++ :results output
+#include <iostream>
+
+int main()
+{
+    int numDoors{100};
+
+    bool doors[numDoors]{};
+
+    for (int i{1}; i <= numDoors; ++i)
+        for (int j{1}; j <= numDoors; ++j)
+            if (j % i == 0)
+                doors[j-1] = !doors[j-1];
+
+    for (int i{0}; i < numDoors; ++i)
+        if (doors[i])
+            std::cout << "Door #" << i+1 << " is Open\n";
+
+    return 0;
+}
+#+end_src

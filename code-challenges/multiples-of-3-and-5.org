@@ -1,0 +1,56 @@
+#+title: Multiples Of 3 And 5
+
+* Contents :toc:
+- [[#info][Info]]
+  - [[#explaination][Explaination]]
+  - [[#pseudo-code][Pseudo Code]]
+  - [[#theory][Theory]]
+- [[#code][Code]]
+  - [[#c][C++]]
+
+* Info
+** Explaination
+
+For the given limit, the proper solution is =233168=.
+
+** Pseudo Code
+
+#+name: multiples-of-3-and-5-ps
+#+begin_src text
+
+#+end_src
+
+** Theory
+* Code
+** C++
+
+#+name: multiples-of-3-and-5-cpp
+#+begin_src C++ :results output
+#include <iostream>
+
+int main()
+{
+    int limit{1000};
+    int cases[] {3, 5};
+    int numCases{2};
+    int sum{0};
+
+    for (int i{1}; i < limit; ++i)
+    {
+        for (int c{0}; c < numCases; ++c)
+        {
+            if ((i % cases[c]) == 0)
+            {
+                sum += i;
+                break;
+            }
+        }
+    }
+
+    std::cout << sum;
+    return 0;
+}
+#+end_src
+
+#+RESULTS: multiples-of-3-and-5-cpp
+: 233168

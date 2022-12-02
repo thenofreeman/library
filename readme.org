@@ -1,0 +1,24 @@
+#+title: Library
+
+* Outline :toc:
+- [[#overview][Overview]]
+- [[#raw-sources][Raw Sources]]
+- [[#contents][Contents]]
+  - [[#algorithms][Algorithms]]
+  - [[#code-challenges][Code Challenges]]
+  - [[#data-structures][Data Structures]]
+
+* Overview
+
+This repo is meant to be a general storage place for code snippets and other educational concepts. The purpose is for both easy recall and extra practice with the particular lemma of information.
+
+* Raw Sources
+
+Can be found in ...
+
+* Contents
+** Algorithms
+*** Bubble Sort
+** Code Challenges
+*** Hello World
+** Data Structures

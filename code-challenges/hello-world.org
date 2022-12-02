@@ -1,0 +1,82 @@
+#+title: Hello, World!
+
+* Contents :toc:
+- [[#info][Info]]
+  - [[#explaination][Explaination]]
+  - [[#pseudo-code][Pseudo Code]]
+  - [[#theory][Theory]]
+- [[#code][Code]]
+  - [[#c][C++]]
+  - [[#javascript][JavaScript]]
+  - [[#python][Python]]
+
+* Info
+** Explaination
+
+A Hello, World! program is the bare-minimum example project for any particular programming language. It is a great, and simple, exercise to verify that you project environment is working properly before starting more complicated tasks with a language.
+
+Why "Hello, World!"? Well, essentially it's just convention, though for a full explaination check out this _.
+
+** Pseudo Code
+
+Our pseudocode here, as will be the case with many of the actual programs, is very simple. All we have to do is call the corresponding output function with the text we want to display, ie. "Hello, World!", and we're good to go!
+
+#+name: hello-world-ps
+#+begin_src text
+print "Hello World!"
+#+end_src
+
+** Theory
+
+While it may seem like a trivial task in most of these languages, there is quite a lot of work going on in the background that we're lucky enough to not have to program ourselves. We can see this a little more clearly with some of the less abstracted languages like _ or _.
+
+Under the hood ...
+
+* Code
+** C++
+
+The absolute bare minimum in C++ is a tad more than most modern languages.
+
+Firstly, you'll need to include the standard library's =iostream= header file in order to access input-output streams.
+
+Use the =cout= function found in the =std= namespace and pass it the parameter ="Hello, World!=. I like to append a newline (=\n=), as an additional parameter, for readability, but this is completely optional.
+
+=return 0= to say that, if the program reaches that line, it executed sucessfully.
+
+#+name: hello-world-cpp
+#+begin_src C++ :results output
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello, World!" << '\n';
+    return 0;
+}
+#+end_src
+
+#+RESULTS: hello-world-cpp
+: Hello, World!
+
+** JavaScript
+
+When using browser JavaScript or NodeJS, printing your text is as simple as calling the =console.log= function with the parameter ="Hello, World!"=.
+
+#+name: hello-world-js
+#+begin_src js :results output
+console.log("Hello, World!");
+#+end_src
+
+#+RESULTS: hello-world-js
+: Hello, World!
+
+** Python
+
+In Python, just call the print function with ="Hello, World!"= as a parameter.
+
+#+name: hello-world-py
+#+begin_src python :results output
+print("Hello, World!")
+#+end_src
+
+#+RESULTS: hello-world-py
+: Hello, World!
